@@ -1,4 +1,4 @@
-package com.github.conversations.sample.webapp;
+package com.github.conversations.sample.webapp.users;
 
 import com.github.maximilientyc.conversations.domain.UserService;
 

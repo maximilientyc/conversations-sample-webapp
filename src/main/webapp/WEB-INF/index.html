@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversations Sample web-app</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="application/javascript"></script>
+</head>
+<body>
+
+<form id="createConversationForm">
+    <label for="participants">Participants (separated by ',')</label>
+    <input type="text" id="participants"/>
+    <input type="submit">
+</form>
+
+<script>
+    $('#createConversationForm').submit(function (event) {
+        event.preventDefault();
+
+        var conversation = {};
+        conversation.userIds = $('#participants').val().split(',');
+        $.ajax({
+            data: JSON.stringify(conversation),
+            contentType: 'application/json',
+            method: 'POST',
+            url: 'conversations'
+        });
+    })
+</script>
+
+</body>
+</html>
