@@ -7,3 +7,5 @@ install:
   - mvn install --settings .travis/settings.xml
 after_success:
   - mvn clean deploy --settings .travis/settings.xml
+services:
+  - mongodb
