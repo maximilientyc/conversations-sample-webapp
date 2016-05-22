@@ -25,7 +25,8 @@ function loadConversations() {
         method: 'get',
         url: 'conversations/search',
         success: function (data, textStatus, jqXHR) {
-            var conversations = data;
+            console.log(data)
+            var conversations = data.itemList;
             conversations.forEach(function (element, index, array) {
                 $('#conversationList').append($('<li>').append(getConversationSummary(element)));
             })

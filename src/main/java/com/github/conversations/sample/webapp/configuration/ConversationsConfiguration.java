@@ -2,9 +2,14 @@ package com.github.conversations.sample.webapp.configuration;
 
 import com.github.conversations.sample.webapp.users.SampleUserRepository;
 import com.github.conversations.sample.webapp.users.SampleUserService;
-import com.github.maximilientyc.conversations.domain.*;
-import com.github.maximilientyc.conversations.repositories.mongodb.MongoDbConversationRepository;
-import com.github.maximilientyc.conversations.repositories.mongodb.MongoDbMessageRepository;
+import com.github.maximilientyc.conversations.domain.ConversationFactory;
+import com.github.maximilientyc.conversations.domain.ParticipantFactory;
+import com.github.maximilientyc.conversations.domain.repositories.ConversationRepository;
+import com.github.maximilientyc.conversations.domain.repositories.MessageRepository;
+import com.github.maximilientyc.conversations.domain.repositories.mongodb.MongoDbConversationRepository;
+import com.github.maximilientyc.conversations.domain.repositories.mongodb.MongoDbMessageRepository;
+import com.github.maximilientyc.conversations.domain.services.ConversationService;
+import com.github.maximilientyc.conversations.domain.services.UserService;
 import com.github.maximilientyc.conversations.restadapter.ConversationController;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
